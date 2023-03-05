@@ -3,7 +3,7 @@ use anchor_lang::prelude::borsh::{BorshDeserialize, BorshSerialize};
 use anchor_lang::prelude::ProgramError::InvalidArgument;
 use anchor_lang::solana_program::entrypoint::ProgramResult;
 
-declare_id!("H5sGxN4aqyuH3StHo1pBXQZNzBgX56jEK7XRakSWVm41");
+declare_id!("4a5yKFWgw7ZrKkj3VgJgu1MxU2UwH68cWdGYvi4rNdrE");
 
 #[program]
 pub mod calculator {
