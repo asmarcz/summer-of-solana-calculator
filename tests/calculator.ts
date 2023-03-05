@@ -3,7 +3,7 @@ import {Program} from "@project-serum/anchor"
 import {Calculator} from "../target/types/calculator"
 
 const {SystemProgram} = anchor.web3
-import {expect} from "chai"
+import {assert, expect} from "chai"
 
 class BinOp {
 	constructor(public name: string, public lhs: number, public rhs: number, public res: number) {
@@ -51,7 +51,7 @@ describe("calculator", () => {
 				})
 				.rpc()
 			const account = await program.account.calculator.fetch(calculatorPair.publicKey)
-			expect(account.result).eq(new anchor.BN(op.res))
+			assert(account.result.eqn(op.res))
 		})
 	}
 })
