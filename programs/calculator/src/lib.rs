@@ -10,7 +10,7 @@ pub mod calculator {
     pub fn create(ctx: Context<Create>, init_message: String) -> ProgramResult {
         let calculator = &mut ctx.accounts.calculator;
         calculator.greeting = init_message;
-        Ok({})
+        Ok(())
     }
 }
 
